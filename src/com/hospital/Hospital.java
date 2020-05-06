@@ -141,10 +141,14 @@ public class Hospital {
 			if (con == null) {
 				return "error while connecting to the database for reading";
 			}
-
-			output = "<table border=\"1\"><tr><th>Hospital name</th>" + "<th>Hospital license number</th>"
-					+ "<th>telephone number</th>" + "<th>emergancy number</th>" + "<th>facilities</th>"
-					+ "<th>Room numbers</th></tr>" + "<th>hospital</th></tr>" + "<th>Update</th><th>Remove</th></tr>";
+			output = "<table class='table'></th><th>Hospital Name</th>"					
+					 +"<th>License Number</th>"
+					 +"<th>Telphone No</th>"
+					 + "<th>Emergancy Number</th>"
+					 +"<th> Facilities</th>"		
+					 +"<th>Room number</th>"
+					 +"<th>Update</th>"
+					 +"<th>Delete</th>"+"</tr>";
 
 			String query = "select * from hospital ";
 			Statement stmt = con.createStatement();
